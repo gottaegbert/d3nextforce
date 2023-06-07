@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:prettierx/standardize"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "prettierx"
+  ],
+  "rules": {
+    "complexity": ["error", { "max": 5 }],
+    "max-depth": ["error", { "max": 4}],
+    "max-lines": ["error", {
+      "max": 200,
+      "skipComments": true
+    }],
+    "max-lines-per-function": ["warn", { "max": 25 }],
+    "no-console": "warn",
+    "no-magic-numbers": "error",
+    "prettierx/options": ["warn", { "printWidth": 80 }],
+    "import/order": [ "error", {
+      "newlines-between": "always",
+      "alphabetize": {
+        "order": "asc",
+        "caseInsensitive": true
+      }
+    }],
+    "@typescript-eslint/explicit-function-return-type": [
+      "warn",
+      {
+        "allowExpressions": true,
+        "allowConciseArrowFunctionExpressionsStartingWithVoid": true
+      }
+    ]
+  }
+}
